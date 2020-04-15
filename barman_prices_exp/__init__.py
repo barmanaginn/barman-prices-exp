@@ -14,8 +14,8 @@
 # You should have received a copy of the GNU General Public License
 # along with barman-prices-exp.  If not, see <https://www.gnu.org/licenses/>.
 
-from django.utils.translation import ugettext_lazy as _
 from django.urls import reverse_lazy
+from django.utils.translation import ugettext_lazy as _
 
 from barman.plugin import BarmanPlugin
 

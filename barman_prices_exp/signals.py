@@ -16,16 +16,15 @@
 
 from math import ceil
 
+from django.contrib import messages
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.utils.translation import ugettext_lazy as _
 
-from management.models import Keg, Product
-from django.contrib import messages
-
 from barman_prices_exp import PluginApp
 from barman_prices_exp.models import PriceProfile
 from barman_prices_exp.utils import compute_price
+from management.models import Keg, Product
 
 
 @receiver(post_save, sender=Keg)

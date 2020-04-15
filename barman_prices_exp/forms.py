@@ -14,10 +14,10 @@
 # You should have received a copy of the GNU General Public License
 # along with barman-prices-exp.  If not, see <https://www.gnu.org/licenses/>.
 
-from .models import PriceProfile
 from django import forms
-
 from django.utils.translation import ugettext_lazy as _
+
+from .models import PriceProfile
 
 
 class PriceProfileForm(forms.ModelForm):

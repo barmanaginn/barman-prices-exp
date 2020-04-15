@@ -23,7 +23,8 @@ from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
 
 from barman.acl import active_required
-from .forms import PriceProfileForm, ComputePriceForm
+
+from .forms import ComputePriceForm, PriceProfileForm
 from .models import PriceProfile
 from .utils import compute_price
 
