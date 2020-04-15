@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block entete %}{% trans "Price profiles" %}{% endblock %}
+{% block navbar %}
+<ul>
+	<li><a href="#first">{% trans "Price profiles" %}</a></li>
+</ul>
+{% endblock %}
+{% block content %}
+<section id="first" class="main">
+	<header class="major">
+		<h2>{% trans "Price profiles" %}</h2>
+	</header>
+	{% if perms.barman_prices_exp.add_priceprofile %}
+	<a class="button" href="{% url 'plugins:barman_prices_exp:price-profiles-add' %}"><i class="fa fa-plus-square"></i>
+		{% trans "Add price profile" %}</a><br><br>
+	{% endif %}
+	<div class="table-wrapper">
+		<table>
+			<thead>
+				<tr>
+					<th>{% trans "Name" %}</th>
+					<th>{% trans "\(a\) (constant margin)" %}</th>
+					<th>{% trans "\(b\) (variable margin)" %}</th>
+					<th>{% trans "\(c\) (form parameter) " %}</th>
+					<th>{% trans "\(\alpha\) (scope)" %}</th>
+					<th>{% trans "Use for drafts ?" %}</th>
+					<th>{% trans "Use for products ?" %}</th>
+					<th>{% trans "Administration" %}</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for pp in price_profiles %}
+				<tr>
+					<td>{{ pp.name }} </td>
+					<td>{{ pp.a }}</td>
+					<td>{{ pp.b }}</td>
+					<td>{{ pp.c }}</td>
+					<td>{{ pp.alpha }}</td>
+					<td><i class="fa fa-{{ pp.use_for_drafts | yesno:'check,times'}}"></i></td>
+					<td><i class="fa fa-{{ pp.use_for_products | yesno:'check,times'}}"></i></td>
+					<td>{% if perms.barman_prices_exp.change_priceprofile %}<a class="button small"
+							href="{% url 'plugins:barman_prices_exp:price-profiles-edit' pp.pk %}"><i
+								class="fa fa-pencil-alt"></i>
+							{% trans "Change" %}</a> {% endif %}{% if perms.barman_prices_exp.delete_priceprofile %}<a
+							class="button small"
+							href="{% url 'plugins:barman_prices_exp:price-profiles-delete' pp.pk %}"><i
+								class="fa fa-trash"></i> {% trans "Delete" %}</a>{% endif %}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+	{% trans "The following function is used" %}
+	\[M(x) = \left\{\begin{array}{l}a + b\exp\left(\frac{-c}{(x-\alpha)^2}\right) \text{ {% trans "if" %} } x < \alpha
+		\\ a \text{ {% trans "if" %} } x \geq \alpha\end{array}\right.\] {% trans "Price is calculated as" %}
+		\[p(x)=(1+M(x))x\] {% trans "where \(p(x)\) is the sale's price for purchase price \(x\)." %} </section>
+		{% endblock %}
+		{% block extra_scripts %}
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		{% endblock %}

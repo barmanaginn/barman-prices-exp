@@ -1,0 +1,4 @@
+include LICENSE
+include README.md
+recursive-include barman_prices_exp/templates *
+recursive-include barman_prices_exp/static *

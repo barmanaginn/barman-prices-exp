@@ -1,0 +1,214 @@
+# barman-prices-exp - plugin for barman
+# Copyright © 2020 Yoann Pietri <me@nanoy.fr>
+#
+# barman-prices-exp is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# barman-prices-exp is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with barman-prices-exp.  If not, see <https://www.gnu.org/licenses/>.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: barman-prices-exp 0.1\n"
+"Report-Msgid-Bugs-To: <barman@nanoy.fr>\n"
+"POT-Creation-Date: 2020-04-15 22:48+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Yoann Pietri <me@nanoy.fr>\n"
+"Language-Team: \n"
+"Language: French\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: __init__.py:29
+msgid "Calculate automatically prices using exponential function"
+msgstr "Calcule automatiquement les prix en utilisant une fonction exponentielle"
+
+#: __init__.py:37 templates/barman_prices_exp/price_profiles_index.html:3
+#: templates/barman_prices_exp/price_profiles_index.html:6
+#: templates/barman_prices_exp/price_profiles_index.html:12
+msgid "Price profiles"
+msgstr "Profils de prix"
+
+#: __init__.py:46 views.py:152
+msgid "Compute price"
+msgstr "Calculer le prix"
+
+#: __init__.py:61
+msgid ""
+"Auto update prices of pint, half pint and quarter pint at the creation of a "
+"keg."
+msgstr "Met à jour automatiquement le prix de la pinte, du demi et du quart de pinte à la création d'un fût."
+
+#: __init__.py:68
+msgid ""
+"Auto update prices of pint, half pint and quarter pint when a keg is changed."
+msgstr "Met à jour automatiquement le prix de la pinte, du demi et du quart de pinte à la modification d'un fût.""
+
+#: __init__.py:75
+msgid "Replace price by the computed price at the creation of a product."
+msgstr "Remplace le prix d'un produit par le prix calculé lorsque celui-ci est créé."
+
+#: __init__.py:82
+msgid "Replace price by the computed price awhen a product is changed."
+msgstr "Remplace le prix d'un produit par le prix calculé lorsque celui-ci est modifié."
+
+#: __init__.py:89
+msgid "Use 10 to round to the tenth and 100 to the hundredth."
+msgstr "Utiliser 10 pour arrondir au dixième et 100 pour arrondir au centième."
+
+#: forms.py:39
+msgid "Price profile"
+msgstr "Profil de prix"
+
+#: forms.py:41
+msgid "Price"
+msgstr "Prix"
+
+#: models.py:29
+msgid "price profile"
+msgstr "profil de prix"
+
+#: models.py:30
+msgid "price profiles"
+msgstr "profils de prix"
+
+#: models.py:32
+msgid "name"
+msgstr "nom"
+
+#: models.py:34
+msgid "constant margin"
+msgstr "marge constante"
+
+#: models.py:37
+msgid "variable margin"
+msgstr "marge variable"
+
+#: models.py:40
+msgid "form parameter"
+msgstr "paramètre de forme"
+
+#: models.py:42
+msgid "scope"
+msgstr "étendue"
+
+#: models.py:44
+msgid "use for drafts ?"
+msgstr "utiliser pour les pressions ?"
+
+#: models.py:47
+msgid "use for products ?"
+msgstr "utiliser pour les produits ?"
+
+#: signals.py:36
+msgid "No price profile is defined for drafts."
+msgstr "Aucun profil de prix défini pour les pressions."
+
+#: signals.py:63
+msgid "No price profile is defined for products."
+msgstr "Aucun profil de prix défini pour les produits."
+
+#: templates/barman_prices_exp/price_profiles_index.html:16 views.py:66
+msgid "Add price profile"
+msgstr "Ajouter un profil de prix"
+
+#: templates/barman_prices_exp/price_profiles_index.html:22
+msgid "Name"
+msgstr "Nom"
+
+#: templates/barman_prices_exp/price_profiles_index.html:23
+msgid "\\(a\\) (constant margin)"
+msgstr "\\(a\\) (marge constante)"
+
+#: templates/barman_prices_exp/price_profiles_index.html:24
+msgid "\\(b\\) (variable margin)"
+msgstr "\\(b\\) (marge variable)"
+
+#: templates/barman_prices_exp/price_profiles_index.html:25
+msgid "\\(c\\) (form parameter) "
+msgstr "\\(c\\) (paramètre de forme)"
+
+#: templates/barman_prices_exp/price_profiles_index.html:26
+msgid "\\(\\alpha\\) (scope)"
+msgstr "\\(\alpha\\) (étendue)"
+
+#: templates/barman_prices_exp/price_profiles_index.html:27
+msgid "Use for drafts ?"
+msgstr "Utiliser pour les pressions ?"
+
+#: templates/barman_prices_exp/price_profiles_index.html:28
+msgid "Use for products ?"
+msgstr "Utiliser pour les produits ?"
+
+#: templates/barman_prices_exp/price_profiles_index.html:29
+msgid "Administration"
+msgstr "Administration"
+
+#: templates/barman_prices_exp/price_profiles_index.html:45 views.py:98
+msgid "Change"
+msgstr "Modifier"
+
+#: templates/barman_prices_exp/price_profiles_index.html:48
+msgid "Delete"
+msgstr "Supprimer"
+
+#: templates/barman_prices_exp/price_profiles_index.html:54
+msgid "The following function is used"
+msgstr "La fonction suivante est utilisée"
+
+#: templates/barman_prices_exp/price_profiles_index.html:55
+#: templates/barman_prices_exp/price_profiles_index.html:56
+msgid "if"
+msgstr "si"
+
+#: templates/barman_prices_exp/price_profiles_index.html:56
+msgid "Price is calculated as"
+msgstr "Le prix est calculé comme suit"
+
+#: templates/barman_prices_exp/price_profiles_index.html:57
+msgid "where \\(p(x)\\) is the sale's price for purchase price \\(x\\)."
+msgstr "où \\(p(x)\\) est le prix de vente pour le prix d'achat \((x\\)."
+
+#: views.py:58
+#, python-brace-format
+msgid "Price profile {name} was created."
+msgstr ""
+
+#: views.py:67
+msgid "Add"
+msgstr ""
+
+#: views.py:89
+#, python-brace-format
+msgid "Price profile {name} was changed."
+msgstr ""
+
+#: views.py:97
+msgid "Change price profile"
+msgstr ""
+
+#: views.py:115
+#, python-brace-format
+msgid "Price profile {name} was deleted"
+msgstr ""
+
+#: views.py:128
+#, python-brace-format
+msgid ""
+"The price is {price_100} {currency} (rounded to the hundredth) or {price_10} "
+"{currency} (rounded to the tenth)."
+msgstr ""
+
+#: views.py:153
+msgid "Compute"
+msgstr ""
